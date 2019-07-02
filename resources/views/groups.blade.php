@@ -1,0 +1,1 @@
+{{$groups->find(1)->description}}
