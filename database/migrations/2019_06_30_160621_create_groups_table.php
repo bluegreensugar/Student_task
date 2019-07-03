@@ -17,11 +17,12 @@ class CreateGroupsTable extends Migration
             $table->bigIncrements('id')->unsigned();
             $table->string('title');
             $table->string ('description');
-            $table->double('avgprog')->nullable();
-            $table->double('avgmath')->nullable();
-            $table->double('avggraf')->nullable();
-            
-            $table->timestamps();       
+            $table->double('avg_prog')->nullable()->default(0);
+            $table->double('avg_math')->nullable()->default(0);
+            $table->double('avg_graf')->nullable()->default(0);
+
+
+            $table->timestamps();
         });
     }
 

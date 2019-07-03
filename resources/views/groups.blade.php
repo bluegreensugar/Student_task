@@ -1,1 +1,2 @@
-{{$groups->find(1)->description}}
+{{$groups->find(3)->title
+}}
