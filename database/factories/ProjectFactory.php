@@ -4,6 +4,7 @@
 
 use App\Groups;
 use Faker\Generator as Faker;
+use App\Students;
 
 $factory->define(Groups::class, function (Faker $faker) {
     $faker  = \Faker\Factory::create('ru_RU');
@@ -13,11 +14,11 @@ $factory->define(Groups::class, function (Faker $faker) {
 
     ];
 });
-/*$factory->define(Groups::class, function (Faker $faker) {
+$factory->define(Students::class, function (Faker $faker) {
     $faker  = \Faker\Factory::create('ru_RU');
     return [
-        'title'=>$faker->city,
-        'description' =>$faker->unique()->word
+        'name'=>$faker->name,
+        'birthday' =>$faker->date
 
     ];
-});*/
+});
