@@ -21,7 +21,7 @@ class StudentsSeeder extends Seeder
                 'group_id' => $this->random_group()
             ]);
         }
-     
+        
     }
     public function random_group()
     {

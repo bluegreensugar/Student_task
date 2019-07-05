@@ -13,5 +13,29 @@ class GroupsController extends Controller
       
        return view('groups', compact('groups'));
     }
+    public function create(Request $request)
+    {
+       
+    }
+    public function store(Request $request)
+    {
+      
+    }
+    public function show(Groups $group, Request $request)
+    {
+       
+    }
+    public function edit(Request $request)
+    {
+      
+    }
+    public function update(Request $request)
+    {
+       
+    }
+    public function destroy(Request $request)
+    {
+       
+    }
 }
 
