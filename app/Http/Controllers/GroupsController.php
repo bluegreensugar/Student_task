@@ -11,31 +11,35 @@ class GroupsController extends Controller
     {
        $groups = Groups::all();
       
-       return view('groups', compact('groups'));
+       return view('groups.index', compact('groups'));
     }
     public function create(Request $request)
     {
-       
+        $group = new Groups();
+        return view('groups.create');
     }
     public function store(Request $request)
     {
-      
+        Groups::create($request->all());
+        return redirect(route('groups.index'));
     }
     public function show(Groups $group, Request $request)
     {
-       
+        return view('groups.show',compact('group'));
     }
-    public function edit(Request $request)
+    public function edit(Groups $group, Request $request)
     {
-      
+        $group->update($request->all());
+        return redirect(route('groups.index'));
     }
     public function update(Request $request)
     {
        
     }
-    public function destroy(Request $request)
+    public function destroy(Groups $group, Request $request)
     {
-       
+        $group->delete();
+        return redirect(route('groups.index'));
     }
 }
 
